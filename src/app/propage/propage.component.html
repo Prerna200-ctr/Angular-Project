@@ -1,0 +1,94 @@
+  <!--                          WORKING ON MY HTML                      -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- fafa icons link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+      <link rel="stylesheet" href="propage.component.css">
+      <title>User Interface</title>
+  </head>
+  <body >
+      <div class="search">
+          <form action="#">
+              <input type="text" placeholder=" Search BRID" name="search">
+              <button>
+                  <i class="fa fa-search"
+                      style="font-size: 18px;">
+                  </i>
+              </button>
+          </form>
+      </div>
+
+<!-- Button to clear selection -->
+<!-- <button (click)="clearSelection()">Clear Selection</button> -->
+<!-- AG Grid Angular Component -->
+<div class="datatable" style="display:flex;justify-content:center;">
+  <ag-grid-angular
+  style="width: 616px; height: 400px;"
+  class="ag-theme-alpine"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [rowSelection]="rowSelection"
+  (selectionChanged)="onSelectionChanges($event)"
+  (gridReady)="onGridReady($event)"
+  [rowData] = "myData"
+  [animateRows]="true"
+  [pagination]="true"
+  [paginationPageSize]="10"
+  
+></ag-grid-angular>
+</div>
+
+ 
+<!-- adding buttons -->
+<div id="outer">
+<div class="inner"><button type="button" class="btn btn-primary" (click)="add()">ADD</button></div>
+<div class="inner"><button type="button" class="btn btn-primary" (click)="delete()">DELETE</button></div>
+
+</div>
+
+
+<!-- making form -->
+<ng-container *ngIf="adddata">
+<div class="container">
+  <!-- <h2>Column Sizing</h2>
+  <p>The form below shows input elements with different widths using different .col-xs-* classes:</p> -->
+  <form>
+    <div class="form-group row">
+      <div class="col-xs-2">
+        <label for="ex1">Name</label>
+        <input class="form-control" id="ex1"  type="text"  [(ngModel)]="inputname" [ngModelOptions]="{standalone:true}">
+      </div>
+      <div class="col-xs-3">
+        <label for="ex3">AccountNumber</label>
+        <input class="form-control" id="ex2" type="text" [(ngModel)]="inputacn" [ngModelOptions]="{standalone:true}">
+      </div>
+      <div class="col-xs-3">
+        <label for="ex3">Balance</label>
+        <input class="form-control" id="ex3" type="text" [(ngModel)]="inputbal" [ngModelOptions]="{standalone:true}">
+      </div>
+    </div>
+
+    <div class="inner"><button type="button" class="btn btn-primary" (click)="close()">CLOSE</button></div>
+    <div class="inner"><button type="button" class="btn btn-primary" (click)="save()">SAVE</button></div>
+
+  </form>
+</div>
+</ng-container>
+
+  </body>
+  </html>
+
+
+
+
+

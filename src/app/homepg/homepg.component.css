@@ -1,0 +1,25 @@
+.homeBg {
+    background-image: url('../../assets/image1.PNG');
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.vl {
+  border-left: 6px solid rgb(26, 0, 128);
+  height: 50px;
+  position: absolute;
+  left: 4%;
+  margin-left: -3px;
+  top: 220px;
+}
+
+.spdw{
+  color: rgb(9, 47, 123);
+  padding-left: 50px;
+  padding-top: 138px;
+}
+
+.btn-primary{
+margin-left: 44px;
+}

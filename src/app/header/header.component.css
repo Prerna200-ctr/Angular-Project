@@ -1,0 +1,47 @@
+header{
+    background-color: rgb(193, 213, 233);
+    padding: 15px;
+    box-shadow: 0 0 3px #000;
+}
+
+header li{
+    display: inline;
+    padding-left: 45px;
+}
+
+/* #homeid{
+     padding-left: 400px; 
+    
+} */
+
+header li a{
+    float: right;
+    color: #333;
+    text-decoration: none;
+    text-align:  right;
+    padding: 13px;
+    transition: .3s ease;   
+}
+
+header li a:hover{
+    color: royalblue;
+}
+
+header ul #contact a{
+    color: aliceblue;
+    background-color: rgb(62, 62, 249);
+    border-radius: 30px;
+    float: right;
+    position: relative;
+    top: -2px;
+}
+
+header ul #contact a:hover{
+    background-color: goldenrod;
+    color: black;
+}
+
+#faicon{
+    float: right;
+    padding: 5px;
+}
